@@ -5,14 +5,14 @@
 class SemverUtils < Formula
   desc "CLIs for interactive with semantic versions and semver tags on git repos"
   homepage "https://github.com/coreeng/semver-utils"
-  version "0.1.0"
+  version "0.1.1"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/coreeng/semver-utils/releases/download/v0.1.0/semver-utils_Darwin_x86_64.tar.gz"
-      sha256 "77653dfd425980505789900a40b97046a6fec9ade0c10ba54b2742583c7bb7ee"
+      url "https://github.com/coreeng/semver-utils/releases/download/v0.1.1/semver-utils_Darwin_x86_64.tar.gz"
+      sha256 "b8d5a5e916faed7af5ffc93a708a1765998c5d66a160d23b5fac7032e09b84b8"
 
       def install
         bin.install "semver"
@@ -20,8 +20,8 @@ class SemverUtils < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/coreeng/semver-utils/releases/download/v0.1.0/semver-utils_Darwin_arm64.tar.gz"
-      sha256 "3c242c565cd52e2bc5d771164a7cdd620040ca70bd37e0df94d4075da55bc333"
+      url "https://github.com/coreeng/semver-utils/releases/download/v0.1.1/semver-utils_Darwin_arm64.tar.gz"
+      sha256 "0f54daa88b0a575656ad01b412fcf4329b08867560e30bf8d807d17571b75c2d"
 
       def install
         bin.install "semver"
@@ -31,26 +31,20 @@ class SemverUtils < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/coreeng/semver-utils/releases/download/v0.1.0/semver-utils_Linux_x86_64.tar.gz"
-        sha256 "1346bd560856e0a1b6f1fb3586a679dd776cb2402a33ba63f0766b9c12260ca2"
-
-        def install
-          bin.install "semver"
-          bin.install "semver-git"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/coreeng/semver-utils/releases/download/v0.1.1/semver-utils_Linux_x86_64.tar.gz"
+      sha256 "af32f1d6746093213018969fd15aa70f95bfeaa76e0968cf762622fc3b64d3fb"
+      def install
+        bin.install "semver"
+        bin.install "semver-git"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/coreeng/semver-utils/releases/download/v0.1.0/semver-utils_Linux_arm64.tar.gz"
-        sha256 "69910a673c28540e2e527ff4448a9612d47a743b7824243fcc0b60dc29777f55"
-
-        def install
-          bin.install "semver"
-          bin.install "semver-git"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/coreeng/semver-utils/releases/download/v0.1.1/semver-utils_Linux_arm64.tar.gz"
+      sha256 "a57711acd292564b809d8bef8cb080d2d750ab714075207eb146d278aed29905"
+      def install
+        bin.install "semver"
+        bin.install "semver-git"
       end
     end
   end
