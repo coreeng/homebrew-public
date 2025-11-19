@@ -5,14 +5,14 @@
 class SemverUtils < Formula
   desc "CLIs for interactive with semantic versions and semver tags on git repos"
   homepage "https://github.com/coreeng/semver-utils"
-  version "0.1.1"
+  version "0.1.2"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/coreeng/semver-utils/releases/download/v0.1.1/semver-utils_Darwin_x86_64.tar.gz"
-      sha256 "b8d5a5e916faed7af5ffc93a708a1765998c5d66a160d23b5fac7032e09b84b8"
+      url "https://github.com/coreeng/semver-utils/releases/download/v0.1.2/semver-utils_Darwin_x86_64.tar.gz"
+      sha256 "5c86bfec7e51d13f898398259739255181e4a8a0b7e80741aa1984f96f34c78c"
 
       def install
         bin.install "semver"
@@ -20,8 +20,8 @@ class SemverUtils < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/coreeng/semver-utils/releases/download/v0.1.1/semver-utils_Darwin_arm64.tar.gz"
-      sha256 "0f54daa88b0a575656ad01b412fcf4329b08867560e30bf8d807d17571b75c2d"
+      url "https://github.com/coreeng/semver-utils/releases/download/v0.1.2/semver-utils_Darwin_arm64.tar.gz"
+      sha256 "82ddb4a91cd7a5fa8da326665a88827ab4ff17a34791045ff5450791aafa6e29"
 
       def install
         bin.install "semver"
@@ -32,16 +32,16 @@ class SemverUtils < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coreeng/semver-utils/releases/download/v0.1.1/semver-utils_Linux_x86_64.tar.gz"
-      sha256 "af32f1d6746093213018969fd15aa70f95bfeaa76e0968cf762622fc3b64d3fb"
+      url "https://github.com/coreeng/semver-utils/releases/download/v0.1.2/semver-utils_Linux_x86_64.tar.gz"
+      sha256 "b14900988a42f85527508a5d1feb5d3ff809dd45daa02f7290e201d08b8f90fc"
       def install
         bin.install "semver"
         bin.install "semver-git"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coreeng/semver-utils/releases/download/v0.1.1/semver-utils_Linux_arm64.tar.gz"
-      sha256 "a57711acd292564b809d8bef8cb080d2d750ab714075207eb146d278aed29905"
+      url "https://github.com/coreeng/semver-utils/releases/download/v0.1.2/semver-utils_Linux_arm64.tar.gz"
+      sha256 "be4fb7cd1cccbfc8aa59a5e6ea3eeeefa4aeab812e04a7e7cf163921c0624b07"
       def install
         bin.install "semver"
         bin.install "semver-git"
