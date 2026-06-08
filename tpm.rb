@@ -5,20 +5,20 @@
 class Tpm < Formula
   desc "Training Platform Module (tpm) CLI — author and manage training modules and labs"
   homepage "https://github.com/coreeng/tpm"
-  version "0.0.12"
+  version "0.0.13"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/coreeng/tpm/releases/download/v0.0.12/tpm_0.0.12_darwin_amd64.tar.gz"
-      sha256 "980f23f66b3e3fd35e6cfdfb70b892164aa85618120d8d48f91ea0fc340eb49e"
+      url "https://github.com/coreeng/tpm/releases/download/v0.0.13/tpm_0.0.13_darwin_amd64.tar.gz"
+      sha256 "67da7a09beae9f630ce154c6af6fd511402074779e08693144076feafb5dabc3"
 
       define_method(:install) do
         bin.install "tpm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/coreeng/tpm/releases/download/v0.0.12/tpm_0.0.12_darwin_arm64.tar.gz"
-      sha256 "2d388362a1f137adbe1774ea6861924abca5307ee6d5a38b9694e41b092c1921"
+      url "https://github.com/coreeng/tpm/releases/download/v0.0.13/tpm_0.0.13_darwin_arm64.tar.gz"
+      sha256 "cf1f7c2c180e123f4a70182df6e8d8e74ace1443dca5effafb7d34ea06de60bb"
 
       define_method(:install) do
         bin.install "tpm"
@@ -28,15 +28,15 @@ class Tpm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coreeng/tpm/releases/download/v0.0.12/tpm_0.0.12_linux_amd64.tar.gz"
-      sha256 "de2ee8d30b26ee3b9f364df9fc3653c1f291d46397f6e9b3f2417bd185bb7d4b"
+      url "https://github.com/coreeng/tpm/releases/download/v0.0.13/tpm_0.0.13_linux_amd64.tar.gz"
+      sha256 "e7b3125697452f561103b242b1180f4933944fc9fb628b0fe5d212549eecfa7e"
       define_method(:install) do
         bin.install "tpm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coreeng/tpm/releases/download/v0.0.12/tpm_0.0.12_linux_arm64.tar.gz"
-      sha256 "46b27d4eb50044f9ea82a2feba4d33ce2158196cae6404d34ff99be97eda6c4b"
+      url "https://github.com/coreeng/tpm/releases/download/v0.0.13/tpm_0.0.13_linux_arm64.tar.gz"
+      sha256 "33204832b131c9a18aa6a8ac5e7f0a0d4d5167ea895242c2b3f8b0882e1b1002"
       define_method(:install) do
         bin.install "tpm"
       end
