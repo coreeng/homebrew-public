@@ -5,20 +5,20 @@
 class Tpm < Formula
   desc "Training Platform Module (tpm) CLI — author and manage training modules and labs"
   homepage "https://github.com/coreeng/tpm"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/coreeng/tpm/releases/download/v0.1.0/tpm_0.1.0_darwin_amd64.tar.gz"
-      sha256 "7e945e9f595a9eae3f9688f241a53fe295047538bb7b4858f7cf97f977d4f6f5"
+      url "https://github.com/coreeng/tpm/releases/download/v0.1.1/tpm_0.1.1_darwin_amd64.tar.gz"
+      sha256 "d84f03038d1f048ba445fb0a9c6b757dc170417da0e022cf6644ddef38ab95ae"
 
       define_method(:install) do
         bin.install "tpm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/coreeng/tpm/releases/download/v0.1.0/tpm_0.1.0_darwin_arm64.tar.gz"
-      sha256 "41056d93d62b22add4124c5f97717ed1634f2b0f39aa64b2127ccbd40bbf6518"
+      url "https://github.com/coreeng/tpm/releases/download/v0.1.1/tpm_0.1.1_darwin_arm64.tar.gz"
+      sha256 "1491187c725e5a2b8adab01ec45da6b0008f9bc93125d2c1b661a4551a6b6913"
 
       define_method(:install) do
         bin.install "tpm"
@@ -28,15 +28,15 @@ class Tpm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coreeng/tpm/releases/download/v0.1.0/tpm_0.1.0_linux_amd64.tar.gz"
-      sha256 "27ed0c3e2be1263bdcf0c1d959732dfe474d1dd5baa14ef1bdc3c27773a008d1"
+      url "https://github.com/coreeng/tpm/releases/download/v0.1.1/tpm_0.1.1_linux_amd64.tar.gz"
+      sha256 "b6a4d63205690f6459fa29a461f1e35262b17c37f6c7d43cd3b09690bd1a5256"
       define_method(:install) do
         bin.install "tpm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coreeng/tpm/releases/download/v0.1.0/tpm_0.1.0_linux_arm64.tar.gz"
-      sha256 "ec69a5088631d033aab1b83007c79e30f3ead418391227e3538399c8263abb16"
+      url "https://github.com/coreeng/tpm/releases/download/v0.1.1/tpm_0.1.1_linux_arm64.tar.gz"
+      sha256 "f76f92b4c5e7a3c1a08c05cc16439c913acb723167363c7da25849a5388e6fa7"
       define_method(:install) do
         bin.install "tpm"
       end
