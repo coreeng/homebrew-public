@@ -5,20 +5,20 @@
 class Corectl < Formula
   desc "Core Platform CLI"
   homepage "https://github.com/coreeng/corectl"
-  version "0.66.2"
+  version "0.66.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/coreeng/corectl/releases/download/v0.66.2/corectl_Darwin_x86_64.tar.gz"
-      sha256 "dd9fb7fb7234bc1c4f597894cbde3259e1f80788c9f901231d302137f36ed779"
+      url "https://github.com/coreeng/corectl/releases/download/v0.66.3/corectl_Darwin_x86_64.tar.gz"
+      sha256 "1f08e4a667c6ca5bbbb02e1228790c97feb46a4a1da6bd50fabe007be500e937"
 
       define_method(:install) do
         bin.install "corectl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/coreeng/corectl/releases/download/v0.66.2/corectl_Darwin_arm64.tar.gz"
-      sha256 "482d8e6ce3ed52061059f3faa8f0c34c943d0eaf45b11861f40fb24ae6075e03"
+      url "https://github.com/coreeng/corectl/releases/download/v0.66.3/corectl_Darwin_arm64.tar.gz"
+      sha256 "85fadafff1560787fb3adb6ebda932d84df07871a4b27f4b396d194520662353"
 
       define_method(:install) do
         bin.install "corectl"
@@ -28,15 +28,15 @@ class Corectl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coreeng/corectl/releases/download/v0.66.2/corectl_Linux_x86_64.tar.gz"
-      sha256 "d77a6995970274ca9eea4414de91ce8a6f30886d01a7061476fb99a7077b813f"
+      url "https://github.com/coreeng/corectl/releases/download/v0.66.3/corectl_Linux_x86_64.tar.gz"
+      sha256 "c047c11829cc07ee00d088b8ec92a31238332e45586e48aaca23633fabb12cde"
       define_method(:install) do
         bin.install "corectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coreeng/corectl/releases/download/v0.66.2/corectl_Linux_arm64.tar.gz"
-      sha256 "30f113308b80264666b9a5219376b46f03eb346d868d65825a40db36bc14e05e"
+      url "https://github.com/coreeng/corectl/releases/download/v0.66.3/corectl_Linux_arm64.tar.gz"
+      sha256 "6d9764da972ff40d6deb452604617c849747fa6bd94a2f649987e0bc3324117d"
       define_method(:install) do
         bin.install "corectl"
       end
