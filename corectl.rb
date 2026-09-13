@@ -4,37 +4,41 @@
 class Corectl < Formula
   desc "Core Platform command-line client"
   homepage "https://coreplatform.io"
-  version "0.0.10"
+  version "0.0.11"
   version_scheme 1
 
   on_macos do
     on_arm do
-      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:c10e7094dd005cf009410c5aaea105403bf0acc972f1c68e0a63af4518c6cad0"
-      sha256 "c10e7094dd005cf009410c5aaea105403bf0acc972f1c68e0a63af4518c6cad0"
+      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:652f2bcdbdf833328d2bf6b1bd70b6fe28075c17fe0312ee6d8071d2990afcf7"
+      sha256 "652f2bcdbdf833328d2bf6b1bd70b6fe28075c17fe0312ee6d8071d2990afcf7"
     end
     on_intel do
-      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:aaeeb9ee4209e2017c96d20d668ceb22e6815563280cdf5a1a25c0f4f3c83a9c"
-      sha256 "aaeeb9ee4209e2017c96d20d668ceb22e6815563280cdf5a1a25c0f4f3c83a9c"
+      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:b4322da59821a75c291512a75f0e6d1708b6a7323ccac173ed43659c499868b6"
+      sha256 "b4322da59821a75c291512a75f0e6d1708b6a7323ccac173ed43659c499868b6"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:082bfd17f1a953b809e3d7be660edc55295f1754c1b8b3d7d988e99be10a1695"
-      sha256 "082bfd17f1a953b809e3d7be660edc55295f1754c1b8b3d7d988e99be10a1695"
+      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:c3d0437d21a6bd155657e2a125eafdc2a2ab7a9e57bd86d5754e99297aa84d59"
+      sha256 "c3d0437d21a6bd155657e2a125eafdc2a2ab7a9e57bd86d5754e99297aa84d59"
     end
     on_intel do
-      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:24d3f960b71473cbde51c76aecd312e78055d8a40ce3ca502ca7ada4dd702b7e"
-      sha256 "24d3f960b71473cbde51c76aecd312e78055d8a40ce3ca502ca7ada4dd702b7e"
+      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:0731576c9de1e37ffffb462cc2a691e370bb8777b0a0165a6e4946f6adab646b"
+      sha256 "0731576c9de1e37ffffb462cc2a691e370bb8777b0a0165a6e4946f6adab646b"
     end
   end
 
   def install
     bin.install "corectl"
+    generate_completions_from_executable(bin/"corectl", "completion")
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/corectl version")
     assert_match "get", shell_output("#{bin}/corectl --help")
+    assert_path_exists bash_completion/"corectl"
+    assert_path_exists zsh_completion/"_corectl"
+    assert_path_exists fish_completion/"corectl.fish"
   end
 end
