@@ -36,26 +36,6 @@ Once tapped, you can install any formula like so:
 brew install coreeng/public/semver-utils
 ```
 
-### Core Platform CLI
-
-Install the Core Platform API client:
-
-```shell
-brew install coreeng/public/corectl
-corectl version
-```
-
-The client supports macOS and Linux on ARM64 and x86_64. Homebrew downloads the
-matching archive from public GHCR and verifies its checksum; no GitHub login or
-ORAS installation is needed.
-
-Production promotion in `coreeng/core-platform` updates the formula to the selected
-main release. PR previews and main candidates do not update Homebrew until promoted.
-Update with `brew update && brew upgrade corectl`.
-
-See the [corectl reference](https://docs.coreplatform.io/reference/corectl/) for
-sign-in, workspace selection, and cluster listing.
-
 ---
 
 ## 🧾 License
