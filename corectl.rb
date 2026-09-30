@@ -4,28 +4,28 @@
 class Corectl < Formula
   desc "Command-line client for Core Platform"
   homepage "https://coreplatform.io"
-  version "0.0.31"
+  version "0.0.32"
   version_scheme 1
 
   on_macos do
     on_arm do
-      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:9dc056be4949a51cad7a97867897266cf19b44a05bd551e1195ffc50b15a6400"
-      sha256 "9dc056be4949a51cad7a97867897266cf19b44a05bd551e1195ffc50b15a6400"
+      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:9f90d5c296614c4192b88886a1e2c6d360bd5f86fb6460a3936e4a0547da43b9"
+      sha256 "9f90d5c296614c4192b88886a1e2c6d360bd5f86fb6460a3936e4a0547da43b9"
     end
     on_intel do
-      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:6d49a4f9d9319f84d40efe7a7974d7b629f5a3ddbd92ee0c404ffa23f21611f3"
-      sha256 "6d49a4f9d9319f84d40efe7a7974d7b629f5a3ddbd92ee0c404ffa23f21611f3"
+      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:e217926d94489e83acfb8f9047b8e44ef9c17c7ed9f82de3d7fc45f5e1c0e2d4"
+      sha256 "e217926d94489e83acfb8f9047b8e44ef9c17c7ed9f82de3d7fc45f5e1c0e2d4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:51896913128e0201f02464dca9c9a1dbfaebc1d58cb3154bd7451c7a8647773c"
-      sha256 "51896913128e0201f02464dca9c9a1dbfaebc1d58cb3154bd7451c7a8647773c"
+      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:08af6417613d9baca2b603eef05e4fa4a7f14c306f09b42d7b76571a2e40dfb8"
+      sha256 "08af6417613d9baca2b603eef05e4fa4a7f14c306f09b42d7b76571a2e40dfb8"
     end
     on_intel do
-      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:cbe03038713e5725b7de3f13578cf7bd25b133a81f1c16f8222135d576572ee8"
-      sha256 "cbe03038713e5725b7de3f13578cf7bd25b133a81f1c16f8222135d576572ee8"
+      url "https://ghcr.io/v2/coreeng/corectl/blobs/sha256:0ad021c99e03bc12b0e3f074e544b16022c57f080847a2ecae07d5b643779356"
+      sha256 "0ad021c99e03bc12b0e3f074e544b16022c57f080847a2ecae07d5b643779356"
     end
   end
 
